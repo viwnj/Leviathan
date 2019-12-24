@@ -1,0 +1,6 @@
+[submodule "Leviathan/vendor"]
+	path = Leviathan/vendor
+	url = https://github.com/gabime/spdlog.git
+[submodule "Sandbox/vendor"]
+	path = Sandbox/vendor
+	url = https://github.com/g-truc/glm.git
