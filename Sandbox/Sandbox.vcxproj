@@ -180,15 +180,16 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Applcation.cpp" />
     <ClCompile Include="src\AssetManager.cpp" />
     <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\Layer.cpp" />
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\SandboxApp.cpp" />
     <ClCompile Include="src\SandboxApp.h" />
     <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Applcation.h" />
     <ClInclude Include="src\AssetManager.h" />
     <ClInclude Include="src\Component.h" />
     <ClInclude Include="src\Components\Sprite.h" />

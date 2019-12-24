@@ -1,15 +1,15 @@
 #pragma once
-#include <Levi.h>
 #include <string>
 #include <vector>
 #include <iostream>
 #include "Layer.h"
 #include "Entity.h"
+#include "Applcation.h"
 #include "AssetManager.h"
 #include "Components/Transform.h"
 #include "Components/Sprite.h"
 
-class SandboxApp : public Leviathan::Application {
+class SandboxApp : public Application {
 	
 	public:
 
