@@ -1,5 +1,7 @@
-#pragma once
-#include <iostream>
+#ifndef COMPONENT_H
+#define COMPONENT_H
+#include "AssetManager.h"
+
 
 class Entity;
 class Component {
@@ -11,3 +13,5 @@ public:
   virtual void Render(SDL_Renderer* renderer) {
   }
 };
+
+#endif

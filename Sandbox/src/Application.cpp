@@ -1,11 +1,15 @@
-#include "Applcation.h"
+#include "Application.h"
+#include "Renderer.h"
+SDL_Event Application::event;
+SDL_Renderer* Renderer::renderer;
 
 Application::Application() {
   SDL_Init(SDL_INIT_EVERYTHING);              // Initialize SDL2
   IMG_Init(IMG_INIT_PNG);
+  TTF_Init();
   // Initialize the Window
   win = SDL_CreateWindow(
-    "LEVI",
+    "Sandbox",
     SDL_WINDOWPOS_CENTERED,
     SDL_WINDOWPOS_CENTERED,
     800,
@@ -21,11 +25,7 @@ Application::Application() {
   isActive = true;
 
   // Initialize the Renderer
-  renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
-  if (renderer == NULL) {
-    throw "The renderer could not be created";
-  }
-
+  Renderer::Init(win);
 }
 
 float Application::GetDeltaTime() {
@@ -43,6 +43,7 @@ float Application::GetDeltaTime() {
 void Application::Destroy() {
   this->isActive = false;
   SDL_DestroyWindow(win);
-  SDL_Quit();
   IMG_Quit();
+  TTF_Quit();
+  SDL_Quit();
 }

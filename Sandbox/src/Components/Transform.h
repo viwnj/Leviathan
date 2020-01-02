@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TRANSFORM_H
+#define TRANSFORM_H
+
 #include <glm/glm.hpp>
 #include "../Component.h"
 
@@ -31,3 +33,5 @@ class Transform : public Component {
 		void Render(SDL_Renderer* renderer) override {
 		};
 };
+
+#endif

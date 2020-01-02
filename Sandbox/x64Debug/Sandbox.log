@@ -1,12 +1,33 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(444,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(445,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  Applcation.cpp
+  Animation.cpp
+  Application.cpp
   AssetManager.cpp
+  Camera.cpp
+  Collision.cpp
   Entity.cpp
+C:\dev\Leviathan\Sandbox\src\Components\Sprite.h(11,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+  Font.cpp
   Layer.cpp
+  LayerManager.cpp
   Main.cpp
+C:\dev\Leviathan\Sandbox\src\Components\Sprite.h(11,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+  Map.cpp
+  SandboxApp.cpp
+C:\dev\Leviathan\Sandbox\src\Components\Sprite.h(11,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+C:\dev\Leviathan\Sandbox\src\SandboxApp.cpp(87,64): warning C4244: '=': conversão de 'T' para 'int', possível perda de dados
+          with
+          [
+              T=float
+          ]
+C:\dev\Leviathan\Sandbox\src\SandboxApp.cpp(88,64): warning C4244: '=': conversão de 'T' para 'int', possível perda de dados
+          with
+          [
+              T=float
+          ]
   SandboxApp.h
+C:\dev\Leviathan\Sandbox\src\Components\Sprite.h(11,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
   Texture.cpp
   Gerando Código...
+C:\dev\Leviathan\Sandbox\x64Debug\SandboxApp.obj : warning LNK4042: objeto especificado mais de uma vez; extras ignorados
   Sandbox.vcxproj -> C:\dev\Leviathan\Sandbox\x64Debug\Sandbox.exe
-  0 arquivo(s) copiado(s)

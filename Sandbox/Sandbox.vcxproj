@@ -115,19 +115,18 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Leviathan\src;$(ProjectDir)vendor\glm;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Leviathan\src;$(ProjectDir)vendor\glm;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include;$(SolutionDir)Dependencies\SDL2_ttf\include;$(SolutionDir)Dependencies\lua5.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration);$(SolutionDir)Dependencies\SDL2\lib\win64;$(SolutionDir)Dependencies\SDL2_image\lib\win64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Leviathan.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration);$(SolutionDir)Dependencies\SDL2\lib\win64;$(SolutionDir)Dependencies\SDL2_image\lib\win64;$(SolutionDir)Dependencies\SDL2_ttf\lib\x64;$(SolutionDir)Dependencies\lua5.3\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua.lib;SDL2.lib;SDL2_ttf.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "$(SolutionDir)bin\$(Platform)$(Configuration)\*.dll" "$(SolutionDir)Sandbox\$(Platform)$(Configuration)"
-
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -162,7 +161,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Leviathan\src;$(ProjectDir)vendor\glm;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Leviathan\src;$(ProjectDir)vendor\glm;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include;$(SolutionDir)Dependencies\SDL2_ttf\include;$(SolutionDir)Dependencies\lua5.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
@@ -170,32 +169,53 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration);$(SolutionDir)Dependencies\SDL2\lib\win64;$(SolutionDir)Dependencies\SDL2_image\lib\win64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Leviathan.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration);$(SolutionDir)Dependencies\SDL2\lib\win64;$(SolutionDir)Dependencies\SDL2_image\lib\win64;$(SolutionDir)Dependencies\SDL2_ttf\lib\x64;$(SolutionDir)Dependencies\lua5.3\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua.lib;SDL2.lib;SDL2_ttf.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "$(SolutionDir)bin\$(Platform)$(Configuration)\*.dll" "$(SolutionDir)Sandbox\$(Platform)$(Configuration)"
-
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Applcation.cpp" />
+    <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\AssetManager.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Collision.cpp" />
     <ClCompile Include="src\Entity.cpp" />
+    <ClCompile Include="src\Font.cpp" />
     <ClCompile Include="src\Layer.cpp" />
+    <ClCompile Include="src\LayerManager.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Map.cpp" />
+    <ClCompile Include="src\SandboxApp.cpp" />
     <ClCompile Include="src\SandboxApp.h" />
     <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Applcation.h" />
+    <ClInclude Include="src\Animation.h" />
+    <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\AssetManager.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Collision.h" />
     <ClInclude Include="src\Component.h" />
+    <ClInclude Include="src\Components\AllComponents.h" />
+    <ClInclude Include="src\Components\BoxCollider.h" />
+    <ClInclude Include="src\Components\KeyboardControl.h" />
+    <ClInclude Include="src\Components\Label.h" />
+    <ClInclude Include="src\Components\ProjectileEmitter.h" />
     <ClInclude Include="src\Components\Sprite.h" />
+    <ClInclude Include="src\Components\Tile.h" />
     <ClInclude Include="src\Components\Transform.h" />
+    <ClInclude Include="src\Constants.h" />
     <ClInclude Include="src\Entity.h" />
+    <ClInclude Include="src\Font.h" />
     <ClInclude Include="src\Layer.h" />
+    <ClInclude Include="src\LayerManager.h" />
+    <ClInclude Include="src\Map.h" />
+    <ClInclude Include="src\Color.h" />
+    <ClInclude Include="src\Renderer.h" />
     <ClInclude Include="src\Texture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

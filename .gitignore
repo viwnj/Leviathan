@@ -1,3 +1,5 @@
 .vs
 /bin
 /bin-int
+/Sandbox/x64Debug
+/Sandbox/x64Release
