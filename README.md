@@ -1,4 +1,3 @@
-![helicopter game](https://github.com/viwnj/Leviathan/blob/master/image.png)
 
 A sidenote: I made this project as way to learn C++, so it is full of memory leaks and some things are probably poorly done.
 
@@ -12,3 +11,5 @@ This is my first big project with C++ and Lua, I don't expect it to scale much, 
 
 Currently I'm working on a Windows machine, thus it probably cannot be built on Linux/MAC yet. I plan to support
 these two platforms in the future as the code is written in SDL and the current state of it is 100% portable.
+
+![helicopter game](https://github.com/viwnj/Leviathan/blob/master/image.png)
