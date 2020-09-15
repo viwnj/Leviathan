@@ -1,3 +1,5 @@
+A sidenote: I made this project as way to learn C++, so it is full of memory leaks and some things are probably poorly done.
+
 # Leviathan Engine
 
 A Simple 2d Game Engine Made with SDL + Lua
