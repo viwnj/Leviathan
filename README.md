@@ -1,3 +1,5 @@
+![helicopter game](https://github.com/viwnj/Leviathan/blob/master/image.png)
+
 A sidenote: I made this project as way to learn C++, so it is full of memory leaks and some things are probably poorly done.
 
 # Leviathan Engine
